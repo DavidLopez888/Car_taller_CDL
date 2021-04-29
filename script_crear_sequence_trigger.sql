@@ -1,0 +1,15 @@
+create sequence SQ_F07_ROWID_ITEM
+minvalue 1
+maxvalue 999999999999999999999999999
+start with 1
+increment by 1
+cache 20;
+
+CREATE OR REPLACE TRIGGER "TR_T07_EXISTENCIS"
+   BEFORE INSERT ON T07_EXISTENCIS
+   FOR EACH ROW
+BEGIN
+   SELECT SQ_F07_ROWID_ITEM.nextval
+   INTO globalPkg.identity FROM DUAL;
+   :new.F07_ROWID_ITEM:=globalPkg.identity;
+END;
