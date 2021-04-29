@@ -1,0 +1,90 @@
+﻿@model CarTallerCDL.T04Factura
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>T04Factura</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F04ConsecDocto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F04ConsecDocto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F04RazonSocialCliente)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F04RazonSocialCliente)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F04RazonSocialMecanico)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F04RazonSocialMecanico)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F04Notas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F04Notas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F04FechaDocto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F04FechaDocto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F04VlrBruto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F04VlrBruto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F04VlrDesto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F04VlrDesto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F04VlrImpto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F04VlrImpto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F04VlrNeto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F04VlrNeto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F04RowidTerceroClienteNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F04RowidTerceroClienteNavigation.F02Apellido1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F04RowidTerceroMecanicoNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F04RowidTerceroMecanicoNavigation.F02Apellido1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F04RowidTiendaNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F04RowidTiendaNavigation.F08NombreTienda)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.F04RowidFactura">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

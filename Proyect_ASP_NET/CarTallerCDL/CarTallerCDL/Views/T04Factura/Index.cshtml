@@ -1,0 +1,101 @@
+﻿@model IEnumerable<CarTallerCDL.T04Factura>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.F04ConsecDocto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F04RazonSocialCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F04RazonSocialMecanico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F04Notas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F04FechaDocto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F04VlrBruto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F04VlrDesto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F04VlrImpto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F04VlrNeto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F04RowidTerceroClienteNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F04RowidTerceroMecanicoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F04RowidTiendaNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.F04ConsecDocto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F04RazonSocialCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F04RazonSocialMecanico)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F04Notas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F04FechaDocto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F04VlrBruto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F04VlrDesto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F04VlrImpto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F04VlrNeto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F04RowidTerceroClienteNavigation.F02Apellido1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F04RowidTerceroMecanicoNavigation.F02Apellido1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F04RowidTiendaNavigation.F08NombreTienda)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.F04RowidFactura">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.F04RowidFactura">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.F04RowidFactura">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

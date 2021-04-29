@@ -1,0 +1,107 @@
+﻿@model IEnumerable<CarTallerCDL.T041MovtoFactura>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.F041IdItem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F041DescripionItem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F041TipoItem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F041VlrBruto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F041VlrDesto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F041VlrImpto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F041VlrNeto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F041Notas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F041CantItem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F041RowidDsctoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F041RowidFacturaNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F041RowidItemNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F041RowidMantoNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.F041IdItem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F041DescripionItem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F041TipoItem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F041VlrBruto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F041VlrDesto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F041VlrImpto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F041VlrNeto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F041Notas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F041CantItem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F041RowidDsctoNavigation.F06RowidDescto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F041RowidFacturaNavigation.F04RazonSocialCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F041RowidItemNavigation.F01DescripionItem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F041RowidMantoNavigation.F05RowidManto)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.F041RowidMovto">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.F041RowidMovto">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.F041RowidMovto">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,77 @@
+﻿@model IEnumerable<CarTallerCDL.T05Mantenimiento>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.F05EstadoManto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F05Foto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F05Notas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F05IdMantto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F05VlrMin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F05VlrMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F05RowidTerceroClienteNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F05RowidVehiculoNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.F05EstadoManto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F05Foto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F05Notas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F05IdMantto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F05VlrMin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F05VlrMax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F05RowidTerceroClienteNavigation.F02Apellido1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F05RowidVehiculoNavigation.F03Descripcion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.F05RowidManto">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.F05RowidManto">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.F05RowidManto">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

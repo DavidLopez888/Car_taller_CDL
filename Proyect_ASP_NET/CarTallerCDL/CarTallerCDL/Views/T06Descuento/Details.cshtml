@@ -1,0 +1,48 @@
+﻿@model CarTallerCDL.T06Descuento
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>T06Descuento</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F06Estado)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F06Estado)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F06VlrMin)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F06VlrMin)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F06VlrMax)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F06VlrMax)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F06RowidItemNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F06RowidItemNavigation.F01DescripionItem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F06RowidTerceroClienteNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F06RowidTerceroClienteNavigation.F02Apellido1)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.F06RowidDescto">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

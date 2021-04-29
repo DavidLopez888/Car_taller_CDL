@@ -1,0 +1,42 @@
+﻿@model CarTallerCDL.T01Item
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>T01Item</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F01IdItem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F01IdItem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F01DescripionItem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F01DescripionItem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F01TipoItem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F01TipoItem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F01Notas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F01Notas)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.F01RowidItem">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

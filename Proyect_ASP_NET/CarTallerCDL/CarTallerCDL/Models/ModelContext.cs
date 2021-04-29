@@ -50,31 +50,28 @@ namespace CarTallerCDL
 
                 entity.Property(e => e.F01RowidItem)
                     .HasPrecision(10)
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("F01_ROWID_ITEM");
 
                 entity.Property(e => e.F01DescripionItem)
                     .IsRequired()
                     .HasMaxLength(40)
-                    .IsUnicode(false)
-                    .ValueGeneratedOnAdd()
+                    .IsUnicode(false)                    
                     .HasColumnName("F01_DESCRIPION_ITEM");
 
                 entity.Property(e => e.F01IdItem)
                     .HasPrecision(10)
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F01_ID_ITEM");
 
                 entity.Property(e => e.F01Notas)
                     .HasMaxLength(255)
                     .IsUnicode(false)
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F01_NOTAS");
 
                 entity.Property(e => e.F01TipoItem)
                     .IsRequired()
                     .HasMaxLength(10)
                     .IsUnicode(false)
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F01_TIPO_ITEM")
                     .IsFixedLength(true);
             });
@@ -87,107 +84,92 @@ namespace CarTallerCDL
 
                 entity.Property(e => e.F02RowidTercero)
                     .HasPrecision(10)
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("F02_ROWID_TERCERO");
 
                 entity.Property(e => e.F02Apellido1)
                     .IsRequired()
                     .HasMaxLength(40)
                     .IsUnicode(false)
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F02_APELLIDO1");
 
                 entity.Property(e => e.F02Apellido2)
                     .IsRequired()
                     .HasMaxLength(40)
                     .IsUnicode(false)
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F02_APELLIDO2");
 
                 entity.Property(e => e.F02Direccion)
                     .HasMaxLength(255)
                     .IsUnicode(false)
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F02_DIRECCION");
 
                 entity.Property(e => e.F02Email)
                     .HasMaxLength(255)
                     .IsUnicode(false)
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F02_EMAIL");
 
                 entity.Property(e => e.F02Estado)
                     .HasPrecision(5)
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F02_ESTADO");
 
                 entity.Property(e => e.F02IdDocumento)
                     .IsRequired()
                     .HasMaxLength(15)
                     .IsUnicode(false)
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F02_ID_DOCUMENTO")
                     .IsFixedLength(true);
 
                 entity.Property(e => e.F02IndCliente)
                     .HasPrecision(5)
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F02_IND_CLIENTE");
 
                 entity.Property(e => e.F02IndEmpleado)
                     .HasPrecision(5)
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F02_IND_EMPLEADO");
 
                 entity.Property(e => e.F02Nit)
                     .IsRequired()
                     .HasMaxLength(25)
                     .IsUnicode(false)
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F02_NIT");
 
                 entity.Property(e => e.F02Nombre1)
                     .IsRequired()
                     .HasMaxLength(40)
                     .IsUnicode(false)
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F02_NOMBRE1");
 
                 entity.Property(e => e.F02Nombre2)
                     .IsRequired()
                     .HasMaxLength(40)
                     .IsUnicode(false)
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F02_NOMBRE2");
 
                 entity.Property(e => e.F02Notas)
                     .HasMaxLength(255)
                     .IsUnicode(false)
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F02_NOTAS");
 
                 entity.Property(e => e.F02RazonSocial)
                     .IsRequired()
                     .HasMaxLength(100)
                     .IsUnicode(false)
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F02_RAZON_SOCIAL");
 
                 entity.Property(e => e.F02Telfeono)
                     .HasPrecision(10)
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F02_TELFEONO");
 
                 entity.Property(e => e.F02TipoDocto)
                     .IsRequired()
                     .HasMaxLength(1)
                     .IsUnicode(false)
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F02_TIPO_DOCTO")
                     .IsFixedLength(true);
 
                 entity.Property(e => e.F02VlrPresupuesto)
                     .HasColumnType("NUMBER(25,4)")
-                    .ValueGeneratedOnAdd()
                     .HasColumnName("F02_VLR_PRESUPUESTO");
             });
 

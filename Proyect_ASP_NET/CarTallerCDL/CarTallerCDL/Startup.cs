@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 
 namespace CarTallerCDL
 {
@@ -24,6 +26,8 @@ namespace CarTallerCDL
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            var connection = Configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<ModelContext>(options => options.UseOracle(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

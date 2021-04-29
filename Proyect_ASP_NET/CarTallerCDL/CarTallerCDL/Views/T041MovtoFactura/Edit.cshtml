@@ -1,0 +1,94 @@
+﻿@model CarTallerCDL.T041MovtoFactura
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>T041MovtoFactura</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="F041RowidFactura" class="control-label"></label>
+                <select asp-for="F041RowidFactura" class="form-control" asp-items="ViewBag.F041RowidFactura"></select>
+                <span asp-validation-for="F041RowidFactura" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="F041RowidManto" class="control-label"></label>
+                <select asp-for="F041RowidManto" class="form-control" asp-items="ViewBag.F041RowidManto"></select>
+                <span asp-validation-for="F041RowidManto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="F041RowidItem" class="control-label"></label>
+                <select asp-for="F041RowidItem" class="form-control" asp-items="ViewBag.F041RowidItem"></select>
+                <span asp-validation-for="F041RowidItem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="F041RowidDscto" class="control-label"></label>
+                <select asp-for="F041RowidDscto" class="form-control" asp-items="ViewBag.F041RowidDscto"></select>
+                <span asp-validation-for="F041RowidDscto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="F041IdItem" class="control-label"></label>
+                <input asp-for="F041IdItem" class="form-control" />
+                <span asp-validation-for="F041IdItem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="F041DescripionItem" class="control-label"></label>
+                <input asp-for="F041DescripionItem" class="form-control" />
+                <span asp-validation-for="F041DescripionItem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="F041TipoItem" class="control-label"></label>
+                <input asp-for="F041TipoItem" class="form-control" />
+                <span asp-validation-for="F041TipoItem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="F041VlrBruto" class="control-label"></label>
+                <input asp-for="F041VlrBruto" class="form-control" />
+                <span asp-validation-for="F041VlrBruto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="F041VlrDesto" class="control-label"></label>
+                <input asp-for="F041VlrDesto" class="form-control" />
+                <span asp-validation-for="F041VlrDesto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="F041VlrImpto" class="control-label"></label>
+                <input asp-for="F041VlrImpto" class="form-control" />
+                <span asp-validation-for="F041VlrImpto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="F041VlrNeto" class="control-label"></label>
+                <input asp-for="F041VlrNeto" class="form-control" />
+                <span asp-validation-for="F041VlrNeto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="F041Notas" class="control-label"></label>
+                <input asp-for="F041Notas" class="form-control" />
+                <span asp-validation-for="F041Notas" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="F041RowidMovto" />
+            <div class="form-group">
+                <label asp-for="F041CantItem" class="control-label"></label>
+                <input asp-for="F041CantItem" class="form-control" />
+                <span asp-validation-for="F041CantItem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

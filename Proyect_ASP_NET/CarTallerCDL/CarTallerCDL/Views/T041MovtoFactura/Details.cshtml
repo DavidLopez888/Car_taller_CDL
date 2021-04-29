@@ -1,0 +1,96 @@
+﻿@model CarTallerCDL.T041MovtoFactura
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>T041MovtoFactura</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F041IdItem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F041IdItem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F041DescripionItem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F041DescripionItem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F041TipoItem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F041TipoItem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F041VlrBruto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F041VlrBruto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F041VlrDesto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F041VlrDesto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F041VlrImpto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F041VlrImpto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F041VlrNeto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F041VlrNeto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F041Notas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F041Notas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F041CantItem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F041CantItem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F041RowidDsctoNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F041RowidDsctoNavigation.F06RowidDescto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F041RowidFacturaNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F041RowidFacturaNavigation.F04RazonSocialCliente)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F041RowidItemNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F041RowidItemNavigation.F01DescripionItem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.F041RowidMantoNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.F041RowidMantoNavigation.F05RowidManto)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.F041RowidMovto">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

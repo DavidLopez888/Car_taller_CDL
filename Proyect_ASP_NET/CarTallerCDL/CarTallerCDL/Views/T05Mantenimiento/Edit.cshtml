@@ -1,0 +1,69 @@
+﻿@model CarTallerCDL.T05Mantenimiento
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>T05Mantenimiento</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="F05RowidManto" />
+            <div class="form-group">
+                <label asp-for="F05RowidVehiculo" class="control-label"></label>
+                <select asp-for="F05RowidVehiculo" class="form-control" asp-items="ViewBag.F05RowidVehiculo"></select>
+                <span asp-validation-for="F05RowidVehiculo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="F05RowidTerceroCliente" class="control-label"></label>
+                <select asp-for="F05RowidTerceroCliente" class="form-control" asp-items="ViewBag.F05RowidTerceroCliente"></select>
+                <span asp-validation-for="F05RowidTerceroCliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="F05EstadoManto" class="control-label"></label>
+                <input asp-for="F05EstadoManto" class="form-control" />
+                <span asp-validation-for="F05EstadoManto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="F05Foto" class="control-label"></label>
+                <input asp-for="F05Foto" class="form-control" />
+                <span asp-validation-for="F05Foto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="F05Notas" class="control-label"></label>
+                <input asp-for="F05Notas" class="form-control" />
+                <span asp-validation-for="F05Notas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="F05IdMantto" class="control-label"></label>
+                <input asp-for="F05IdMantto" class="form-control" />
+                <span asp-validation-for="F05IdMantto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="F05VlrMin" class="control-label"></label>
+                <input asp-for="F05VlrMin" class="form-control" />
+                <span asp-validation-for="F05VlrMin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="F05VlrMax" class="control-label"></label>
+                <input asp-for="F05VlrMax" class="form-control" />
+                <span asp-validation-for="F05VlrMax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

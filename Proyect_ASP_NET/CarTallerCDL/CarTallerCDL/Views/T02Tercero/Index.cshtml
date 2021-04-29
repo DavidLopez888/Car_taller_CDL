@@ -1,0 +1,125 @@
+﻿@model IEnumerable<CarTallerCDL.T02Tercero>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.F02IdDocumento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F02Nit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F02RazonSocial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F02Nombre1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F02Nombre2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F02Apellido1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F02Apellido2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F02TipoDocto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F02IndCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F02IndEmpleado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F02Telfeono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F02Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F02Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F02Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F02VlrPresupuesto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.F02Notas)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.F02IdDocumento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F02Nit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F02RazonSocial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F02Nombre1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F02Nombre2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F02Apellido1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F02Apellido2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F02TipoDocto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F02IndCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F02IndEmpleado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F02Telfeono)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F02Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F02Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F02Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F02VlrPresupuesto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.F02Notas)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.F02RowidTercero">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.F02RowidTercero">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.F02RowidTercero">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
