@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -13,7 +14,13 @@ namespace CarTallerCDL
         }
 
         public int F04RowidFactura { get; set; }
+
+        //Consec Factura
+        [Required(ErrorMessage = "El consecutivo del tercero es obligatorio")]
         public int F04ConsecDocto { get; set; }
+
+        //Tercero
+        [Required(ErrorMessage = "El ID del tercero es obligatorio")]
         public int F04RowidTerceroCliente { get; set; }
         public int F04RowidTerceroMecanico { get; set; }
         public string F04RazonSocialCliente { get; set; }

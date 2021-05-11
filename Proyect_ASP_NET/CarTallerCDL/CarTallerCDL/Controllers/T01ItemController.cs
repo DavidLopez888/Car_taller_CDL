@@ -32,11 +32,11 @@ namespace CarTallerCDL.Controllers
                 return NotFound();
             }
 
-            //var t01Item = await _context.T01Items
-            //  .FirstOrDefaultAsync(m => m.F01RowidItem == id);
-            var t01Item = (from item in _context.T01Items
-                           where item.F01RowidItem == id
-                           select item).FirstOrDefault();
+            var t01Item = await _context.T01Items
+                  .FirstOrDefaultAsync(m => m.F01RowidItem == id);
+//            var t01Item = (from item in _context.T01Items
+//                           where item.F01RowidItem == id
+//                           select item).FirstOrDefault();            
             if (t01Item == null)
             {
                 return NotFound();

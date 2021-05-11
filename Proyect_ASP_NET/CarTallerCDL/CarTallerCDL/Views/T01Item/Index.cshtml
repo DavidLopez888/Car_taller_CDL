@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<CarTallerCDL.T01Item>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Items";
 }
 
 <h1>Index</h1>
@@ -13,16 +13,20 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.F01IdItem)
+                Id item
+               @* @Html.DisplayNameFor(model => model.F01IdItem)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.F01DescripionItem)
+                Descripcion
+                @*@Html.DisplayNameFor(model => model.F01DescripionItem)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.F01TipoItem)
+                Tipo de item
+                @*@Html.DisplayNameFor(model => model.F01TipoItem)*@
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.F01Notas)
+                Notas
+              @*  @Html.DisplayNameFor(model => model.F01Notas)*@
             </th>
             <th></th>
         </tr>
@@ -30,14 +34,14 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td>                
                 @Html.DisplayFor(modelItem => item.F01IdItem)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.F01DescripionItem)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.F01TipoItem)
+               @Html.DisplayFor(modelItem => item.F01TipoItem)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.F01Notas)

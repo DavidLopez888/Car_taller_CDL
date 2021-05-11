@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -17,13 +18,22 @@ namespace CarTallerCDL
         }
 
         public int F02RowidTercero { get; set; }
+
+        //Id Tercero
+        [Required(ErrorMessage="El id del tercero es obligatorio")]
         public string F02IdDocumento { get; set; }
+        //NIT
+        [Required(ErrorMessage = "El NIT del tercero es obligatorio")]
         public string F02Nit { get; set; }
+        //Razon social
+        [Required(ErrorMessage = "La razon social es obligatoria")]
         public string F02RazonSocial { get; set; }
         public string F02Nombre1 { get; set; }
         public string F02Nombre2 { get; set; }
         public string F02Apellido1 { get; set; }
         public string F02Apellido2 { get; set; }
+        //Tipo Docto
+        [Required(ErrorMessage = "El Tipo de documento es obligatorio")]
         public string F02TipoDocto { get; set; }
         public short? F02IndCliente { get; set; }
         public short? F02IndEmpleado { get; set; }

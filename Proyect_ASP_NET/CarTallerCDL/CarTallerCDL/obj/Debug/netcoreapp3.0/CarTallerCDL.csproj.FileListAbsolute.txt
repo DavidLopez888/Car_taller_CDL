@@ -164,7 +164,6 @@ C:\Users\David\Desktop\Taller\Proyect_ASP_NET\CarTallerCDL\CarTallerCDL\bin\Debu
 C:\Users\David\Desktop\Taller\Proyect_ASP_NET\CarTallerCDL\CarTallerCDL\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\David\Desktop\Taller\Proyect_ASP_NET\CarTallerCDL\CarTallerCDL\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\David\Desktop\Taller\Proyect_ASP_NET\CarTallerCDL\CarTallerCDL\obj\Debug\netcoreapp3.0\CarTallerCDL.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\David\Desktop\Taller\Proyect_ASP_NET\CarTallerCDL\CarTallerCDL\obj\Debug\netcoreapp3.0\CarTallerCDL.csprojAssemblyReference.cache
 C:\Users\David\Desktop\Taller\Proyect_ASP_NET\CarTallerCDL\CarTallerCDL\obj\Debug\netcoreapp3.0\Razor\Views\T01Item\Create.cshtml.g.cs
 C:\Users\David\Desktop\Taller\Proyect_ASP_NET\CarTallerCDL\CarTallerCDL\obj\Debug\netcoreapp3.0\Razor\Views\T01Item\Delete.cshtml.g.cs
 C:\Users\David\Desktop\Taller\Proyect_ASP_NET\CarTallerCDL\CarTallerCDL\obj\Debug\netcoreapp3.0\Razor\Views\T01Item\Details.cshtml.g.cs
@@ -210,3 +209,4 @@ C:\Users\David\Desktop\Taller\Proyect_ASP_NET\CarTallerCDL\CarTallerCDL\obj\Debu
 C:\Users\David\Desktop\Taller\Proyect_ASP_NET\CarTallerCDL\CarTallerCDL\obj\Debug\netcoreapp3.0\Razor\Views\T041MovtoFactura\Details.cshtml.g.cs
 C:\Users\David\Desktop\Taller\Proyect_ASP_NET\CarTallerCDL\CarTallerCDL\obj\Debug\netcoreapp3.0\Razor\Views\T041MovtoFactura\Edit.cshtml.g.cs
 C:\Users\David\Desktop\Taller\Proyect_ASP_NET\CarTallerCDL\CarTallerCDL\obj\Debug\netcoreapp3.0\Razor\Views\T041MovtoFactura\Index.cshtml.g.cs
+C:\Users\David\Desktop\Taller\Proyect_ASP_NET\CarTallerCDL\CarTallerCDL\obj\Debug\netcoreapp3.0\CarTallerCDL.csprojAssemblyReference.cache

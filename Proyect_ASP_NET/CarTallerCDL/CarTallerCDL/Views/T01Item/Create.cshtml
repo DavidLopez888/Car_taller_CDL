@@ -6,29 +6,32 @@
 
 <h1>Create</h1>
 
-<h4>T01Item</h4>
+<h4>Items</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="F01IdItem" class="control-label"></label>
+                <label asp-for="F01IdItem" class="control-label">Id Item</label>
                 <input asp-for="F01IdItem" class="form-control" />
                 <span asp-validation-for="F01IdItem" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="F01DescripionItem" class="control-label"></label>
+                <label asp-for="F01DescripionItem" class="control-label">Descripcion</label>
                 <input asp-for="F01DescripionItem" class="form-control" />
                 <span asp-validation-for="F01DescripionItem" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="F01TipoItem" class="control-label"></label>
-                <input asp-for="F01TipoItem" class="form-control" />
+                <label asp-for="F01TipoItem" class="control-label">Tipo de item</label>
+                <select asp-for="F01TipoItem" class="form-control">
+                    <option value="True">Inventario</option>
+                    <option value="False">Servicio</option>
+                </select>
                 <span asp-validation-for="F01TipoItem" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="F01Notas" class="control-label"></label>
+                <label asp-for="F01Notas" class="control-label">Notas</label>
                 <input asp-for="F01Notas" class="form-control" />
                 <span asp-validation-for="F01Notas" class="text-danger"></span>
             </div>

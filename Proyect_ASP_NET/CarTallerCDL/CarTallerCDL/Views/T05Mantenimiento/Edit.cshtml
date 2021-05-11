@@ -25,7 +25,10 @@
             </div>
             <div class="form-group">
                 <label asp-for="F05EstadoManto" class="control-label"></label>
-                <input asp-for="F05EstadoManto" class="form-control" />
+                <select asp-for="F05EstadoManto" class="form-control">
+                    <option value="True">Activo</option>
+                    <option value="False">Inactivo</option>
+                </select>
                 <span asp-validation-for="F05EstadoManto" class="text-danger"></span>
             </div>
             <div class="form-group">

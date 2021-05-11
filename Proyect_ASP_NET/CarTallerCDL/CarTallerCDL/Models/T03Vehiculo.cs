@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -14,6 +15,9 @@ namespace CarTallerCDL
 
         public int F03RowidVehivulo { get; set; }
         public int F03RowidTercero { get; set; }
+
+        //Placa
+        [Required(ErrorMessage = "La placa es obligatoria")]
         public string F03Placa { get; set; }
         public string F03Descripcion { get; set; }
         public string F03Notas { get; set; }
